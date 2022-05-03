@@ -6,7 +6,7 @@ public class MovieManager {
     private MovieItem[] items = new MovieItem[0];
 
     public MovieManager(int length) {
-        MovieItem[] items = new MovieItem[length];
+        MovieItem[] items = new MovieItem[findLast().length];
     }
 
     public MovieManager() {

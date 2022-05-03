@@ -6,14 +6,13 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 class MovieManagerTest {
 
-    MovieManager manager = new MovieManager(5);
-
     MovieItem first = new MovieItem(11, "Master and Margaret", 150, 8);
     MovieItem second = new MovieItem(26, "Brigada", 180, 9);
     MovieItem third = new MovieItem(23, "Maski Show", 195, 10);
 
     @Test
     public void MovieManagerNonEmptyWithSetup() {
+        MovieManager manager = new MovieManager(5);
 
 
         manager.save(first);
@@ -29,7 +28,8 @@ class MovieManagerTest {
     }
 
     @Test
-    public void MovieManagerNonEmptyWithSetup2() {
+    public void MovieManagerNonEmptyWithoutSetup() {
+        MovieManager manager = new MovieManager();
 
 
         manager.save(first);
