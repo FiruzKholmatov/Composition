@@ -4,12 +4,17 @@ public class MovieManager {
 
 
     private MovieItem[] items = new MovieItem[0];
+    private int length;
+
 
     public MovieManager(int length) {
+        this.length = length;
         MovieItem[] items = new MovieItem[length];
+
     }
 
     public MovieManager() {
+        MovieItem[] items = new MovieItem[10];
     }
 
 
@@ -34,9 +39,11 @@ public class MovieManager {
     public MovieItem[] findLast() {
         int resultLength;
         if (items.length < 10) {
-            resultLength = items.length;
-        } else {
+            resultLength = length;
+        } else if (items.length > 10) {
             resultLength = 10;
+        } else {
+            resultLength = items.length;
         }
         MovieItem[] result = new MovieItem[resultLength];
         for (int i = 0; i < result.length; i++) {
