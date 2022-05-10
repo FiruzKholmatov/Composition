@@ -38,19 +38,42 @@ public class MovieManagerTest {
 //        manager.save(eleventh);
 
 
+    @Test
+    public void MovieManagerWithAllItems() {
 
+        MovieManager manager = new MovieManager();
+
+        manager.save(first);
+        manager.save(second);
+        manager.save(third);
+        manager.save(fourth);
+        manager.save(fifth);
+        manager.save(sixth);
+        manager.save(seventh);
+        manager.save(eighth);
+        manager.save(ninth);
+        manager.save(tenth);
+        manager.save(eleventh);
+
+
+        MovieItem[] expected = {first, second, third, fourth, fifth, sixth, seventh, eighth, ninth, tenth, eleventh};
+        MovieItem[] actual = manager.findAll();
+
+        assertArrayEquals(expected, actual);
+
+    }
 
     @Test
-    public void MovieManagerNonEmptyWithSetup() {
+    public void MovieManagerNonEmptyWithSetup5() {
 
         MovieManager manager = new MovieManager(5);
 
-//        manager.save(first);
-//        manager.save(second);
-//        manager.save(third);
-//        manager.save(fourth);
-//        manager.save(fifth);
-//        manager.save(sixth);
+        manager.save(first);
+        manager.save(second);
+        manager.save(third);
+        manager.save(fourth);
+        manager.save(fifth);
+        manager.save(sixth);
         manager.save(seventh);
         manager.save(eighth);
         manager.save(ninth);
@@ -95,9 +118,21 @@ public class MovieManagerTest {
 
         MovieManager manager = new MovieManager(0);
 
+        manager.save(first);
+        manager.save(second);
+        manager.save(third);
+        manager.save(fourth);
+        manager.save(fifth);
+        manager.save(sixth);
+        manager.save(seventh);
+        manager.save(eighth);
+        manager.save(ninth);
+        manager.save(tenth);
+        manager.save(eleventh);
+
 
         MovieItem[] expected = {};
-        MovieItem[] actual = manager.findAll();
+        MovieItem[] actual = manager.findLast();
 
         assertArrayEquals(expected, actual);
 
@@ -128,6 +163,36 @@ public class MovieManagerTest {
 
 
     }
+
+    @Test
+    public void MovieManagerNonEmptyWithSetup8() {
+
+        MovieManager manager = new MovieManager(8);
+
+        manager.save(first);
+        manager.save(second);
+        manager.save(third);
+        manager.save(fourth);
+        manager.save(fifth);
+        manager.save(sixth);
+        manager.save(seventh);
+        manager.save(eighth);
+        manager.save(ninth);
+        manager.save(tenth);
+        manager.save(eleventh);
+
+
+        MovieItem[] expected = {eleventh, tenth, ninth, eighth, seventh, sixth, fifth, fourth};
+        MovieItem[] actual = manager.findLast();
+
+        assertArrayEquals(expected, actual);
+
+
+    }
+
+
+
+
 
 
 }
