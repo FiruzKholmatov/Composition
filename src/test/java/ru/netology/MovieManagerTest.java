@@ -1,6 +1,5 @@
 package ru.netology;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
@@ -21,21 +20,6 @@ public class MovieManagerTest {
     private MovieItem tenth = new MovieItem(120, "Caucasian Hostage girl", 200, 10);
     private MovieItem eleventh = new MovieItem(121, "Don't look up", 185, 9);
 
-
-//    @BeforeEach
-//    public void setUp() {
-//
-//        manager.save(first);
-//        manager.save(second);
-//        manager.save(third);
-//        manager.save(fourth);
-//        manager.save(fifth);
-//        manager.save(sixth);
-//        manager.save(seventh);
-//        manager.save(eighth);
-//        manager.save(ninth);
-//        manager.save(tenth);
-//        manager.save(eleventh);
 
 
     @Test
