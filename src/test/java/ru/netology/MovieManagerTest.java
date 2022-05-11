@@ -140,7 +140,7 @@ public class MovieManagerTest {
         manager.save(eleventh);
 
 
-        MovieItem[] expected = {eleventh, tenth, ninth, eighth, seventh, sixth, fifth, fourth, third, second};
+        MovieItem[] expected = {eleventh, tenth, ninth, eighth, seventh, sixth, fifth, fourth, third, second, first};
         MovieItem[] actual = manager.findLast();
 
         assertArrayEquals(expected, actual);
@@ -156,17 +156,17 @@ public class MovieManagerTest {
         manager.save(first);
         manager.save(second);
         manager.save(third);
-        manager.save(fourth);
-        manager.save(fifth);
-        manager.save(sixth);
-        manager.save(seventh);
-        manager.save(eighth);
-        manager.save(ninth);
-        manager.save(tenth);
-        manager.save(eleventh);
+//        manager.save(fourth);
+//        manager.save(fifth);
+//        manager.save(sixth);
+//        manager.save(seventh);
+//        manager.save(eighth);
+//        manager.save(ninth);
+//        manager.save(tenth);
+//        manager.save(eleventh);
 
 
-        MovieItem[] expected = {eleventh, tenth, ninth, eighth, seventh, sixth, fifth, fourth};
+        MovieItem[] expected = {third, second, first};
         MovieItem[] actual = manager.findLast();
 
         assertArrayEquals(expected, actual);
